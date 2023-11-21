@@ -124,6 +124,10 @@ h1 {
   width: 75%;
 }
 
+#header-box { /* .container-outer creates the positioning context */
+  display: none;
+}
+
 @media (min-width: 768px) {
   .header-image-lg {
     display: block;
@@ -145,6 +149,7 @@ h1 {
   }
 
   #header-box { /* .container-outer creates the positioning context */
+    display: block;
     position: absolute;
     width: 150px;
     top: 245px;
