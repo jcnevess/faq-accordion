@@ -74,6 +74,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.header-image-lg {
+  display: none;
+}
+
 .header-image {
   position: relative;
   width: 100%;
@@ -116,4 +120,37 @@ h1 {
 
 .illustration {
   width: 75%;
+}
+
+@media (min-width: 768px) {
+  .header-image-lg {
+    display: block;
+  }
+
+  #header-foreground-lg {
+    position: relative;
+    left: -130px;
+    top: 0px;
+    transform: scale(130%);
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  .container-inner {
+    flex-direction: row;
+    max-width: 960px;    
+    overflow: hidden;
+    padding: 2rem 4rem;    
+    background-color: white;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-position-x: -600px;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+  }
+
+  .content {
+    width: 60%
+  }
 }
