@@ -1,0 +1,119 @@
+/*           CSS RESET        */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*        USER STYLES       */
+:root {
+  --color-soft-violet: hsl(273, 75%, 66%);
+  --color-soft-blue: hsl(240, 73%, 65%);
+  --color-darkest-gray-blue: hsl(237, 12%, 33%);
+  --color-dark-gray-blue: hsl(240, 6%, 50%);
+  --color-light-gray-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background: rgba(175, 104, 234, 1.0);
+  background: linear-gradient(180deg, var(--color-soft-violet), var(--color-soft-blue));
+}
+
+details {
+  color: var(--color-darkest-gray-blue);
+  border-bottom: 1px solid var(--color-light-gray-blue);
+  width: 100%;
+  padding-block: 1rem;
+}
+
+details[open] {
+  color: black;
+  font-weight: 700;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+summary figure {
+  margin-left: 0.5rem;
+}
+
+details[open] summary figure {
+  transform: rotate(180deg);
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+}
+
+details p {
+  color: var(--color-dark-gray-blue);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-foreground {
+  position: absolute;
+  top: -105%;
+}
+
+.container-inner {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  border-radius: 20px;
+}
+
+.container-outer {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  min-width: 240px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.illustration {
+  width: 75%;
+}
