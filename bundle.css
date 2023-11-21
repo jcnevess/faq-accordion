@@ -144,12 +144,22 @@ h1 {
     z-index: -1;
   }
 
+  #header-box { /* .container-outer creates the positioning context */
+    position: absolute;
+    width: 150px;
+    top: 245px;
+    left: -50px;
+  }
+
   .header-image {
     display: none;
   }
 
   .container-outer {
     margin-block: 3rem;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .container-inner {
