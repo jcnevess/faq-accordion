@@ -30,6 +30,8 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
   background: rgba(175, 104, 234, 1.0);
   background: linear-gradient(180deg, var(--color-soft-violet), var(--color-soft-blue));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 details {
@@ -125,33 +127,42 @@ h1 {
 @media (min-width: 768px) {
   .header-image-lg {
     display: block;
+    width: 280px;
+    position: relative;
+    transform: scale(1.5) translate(-200px, -160px);
   }
 
   #header-foreground-lg {
     position: relative;
-    left: -130px;
-    top: 0px;
-    transform: scale(130%);
+    top: 300px;
+    left: 150px;
+  }
+
+  #header-background-lg {
+    position: relative;
+    transform: scale(250%) translateX(-20px);
+    z-index: -1;
   }
 
   .header-image {
     display: none;
   }
 
+  .container-outer {
+    margin-block: 3rem;
+  }
+
   .container-inner {
     flex-direction: row;
+    justify-content: space-between;
     max-width: 960px;    
     overflow: hidden;
-    padding: 2rem 4rem;    
-    background-color: white;
-    background-image: url("./images/bg-pattern-desktop.svg");
-    background-position-x: -600px;
-    background-position-y: 60%;
-    background-repeat: no-repeat;
+    padding: 2rem 4rem;   
   }
 
   .content {
     width: 60%;
     align-items: start;
+    padding-right: 0;
   }
 }
